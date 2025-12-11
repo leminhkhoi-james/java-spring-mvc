@@ -20,14 +20,14 @@ public class Order {
 
     private double totalPrice;
 
+    // user id
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
-    // user id
 
-
-      @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order")
     List<OrderDetail> orderDetails;
+
     public long getId() {
         return id;
     }
